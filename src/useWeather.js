@@ -5,13 +5,7 @@ const useWeather = (url) => {
 
     const getWeatherData = async (url) => {
         try {
-            const res = await fetch(url, {
-                mode: 'no-cors'
-            })
-            const contentType = res.headers.get('content-type');
-            if (!contentType || !contentType.includes('application/json')) {
-                throw new TypeError("Oops, we haven't got JSON!");
-            }
+            const res = await fetch(url)
             const data = await res.json()
             setWeather({ type: 'success', data })
         } catch (e) {
