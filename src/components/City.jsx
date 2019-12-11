@@ -1,18 +1,16 @@
 import React from 'react'
 import styles from './City.module.css'
+import Day from './Day'
+import useWeather from '../hooks/useWeather'
 
-const Day = ({ data }) => {
-    return (
-        <div className={styles.day}>
-            <h2>{data.weather[0].main}</h2>
-            <p>Max: {Math.floor(data.main.temp_max - 273.15)}°C</p>
-            <p>Min: {Math.floor(data.main.temp_min - 273.15)}°C</p>
-        </div>
-    )
-}
-
-const City = ({ weather }) => {
-    const { type, data } = weather
+const City = () => {
+    // in a real app you'd probably receive this url from props
+    const url = 'https://samples.openweathermap.org/data/2.5/forecast?id=524901&appid=b6907d289e10d714a6e88b30761fae22'
+    // I was getting Cross-Origin Resource Sharing errors
+    // so I used this rather hacky service to get the data
+    const { type, data } = useWeather('https://cors-anywhere.herokuapp.com/' + url)
+    // In a real app I'd pass it through a backend or perhaps use some
+    // fancy serverless functions but that's a little out of scope for this
 
     // returns something different depending on what type
     // of data the hook returns
