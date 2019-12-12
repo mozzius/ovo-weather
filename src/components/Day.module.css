@@ -5,9 +5,14 @@
 
 .day > h2 {
     text-align: center;
-    margin: 5px 0 15px;
+    margin: 10px 0 15px;
 }
 
 .day > p {
     margin: 0;
+}
+
+.day > p.date {
+    text-align: center;
+    color: grey;
 }
