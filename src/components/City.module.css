@@ -2,7 +2,7 @@
     padding: 15px;
 }
 
-.city > h1 {
+.city > h2 {
     margin: 10px;
 }
 
@@ -15,10 +15,10 @@
     content: 'Remove city from list';
     font-size: 0.6em;
     float: right;
-    margin-top: 14px;
+    margin-top: 12px;
 }
 
-.city > h1 > span {
+.city > h2 > span {
     color: #707070;
     font-size: 0.6em;
     margin-left: 5px;
@@ -30,6 +30,10 @@
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+hr {
+    border-color: black;
 }
 
 .errorText {

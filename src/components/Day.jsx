@@ -8,7 +8,7 @@ const Day = ({ data }) => {
     return (
         <div className={styles.day}>
             <p className={styles.date}>{date}</p>
-            <h2>{data.weather}</h2>
+            <h3>{data.weather}</h3>
             <p>Max temp: {data.maxTemp}°C</p>
             <p>Humidity: {data.humidity}%</p>
         </div>

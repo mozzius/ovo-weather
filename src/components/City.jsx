@@ -6,7 +6,7 @@ import useWeather from '../hooks/useWeather'
 const Error = ({ location, deleteCity }) => {
     return (
         <div className={styles.city}>
-            <h1 className={styles.name} onClick={deleteCity}>Error!</h1>
+            <h2 className={styles.name} onClick={deleteCity}>Error!</h2>
             <p className={styles.errorText}>There was a problem fetching data for <code>{location}</code></p>
         </div>
     )
@@ -88,7 +88,7 @@ const City = ({ location, deleteCity }) => {
         case 'loading':
             return (
                 <div className={styles.city}>
-                    <h1>Loading...</h1>
+                    <h2>Loading <code>{location}</code>...</h2>
                 </div>
             )
         case 'success':
@@ -98,7 +98,7 @@ const City = ({ location, deleteCity }) => {
 
             return (
                 <div className={styles.city}>
-                    <h1 className={styles.name} onClick={() => deleteCity(location)}>{data.city.name}<span>{data.city.country}</span></h1>
+                    <h2 className={styles.name} onClick={() => deleteCity(location)}>{data.city.name}<span>{data.city.country}</span></h2>
                     <hr />
                     <div className={styles.days}>
                         {days.map(day => <Day key={day.date} data={day} />)}

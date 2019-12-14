@@ -4,27 +4,24 @@
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    border: 1px solid black;
+    border: 2px solid black;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 21px;
-    height: 42px;
+    border-radius: 8px;
+    height: 30px;
 }
 
 .text {
     border: none;
-    padding: 5px 20px;
+    padding: 5px 15px;
     flex-grow: 1;
-    font-size: 1.1em;
 }
 
 .button {
     color: white;
     background-color: black;
     border: none;
-    font-size: 1.1em;
     flex-grow: 0;
-    border-radius: 21px 0 0 21px;
     padding: 0 20px 0 25px;
     cursor: pointer;
 }

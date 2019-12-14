@@ -5,7 +5,7 @@ import Search from './components/Search';
 
 function App() {
     // 
-    const defaultCities = ['London']
+    const defaultCities = ['london']
 
     // get cities from localStorage, fallback to default city (in this case London)
     const [cities, setCities] = useState(JSON.parse(window.localStorage.getItem('cities')) || defaultCities)
@@ -26,7 +26,8 @@ function App() {
         <div className={styles.appContainer}>
             <div className={styles.app}>
                 <h1 className={styles.title}>5 Day Weather Forecast</h1>
-                <Search onSubmit={city => cities[city] === undefined ? setCities([...cities, city]) : null} />
+                {/* only add city if it's not a duplicate */}
+                <Search onSubmit={city => cities.includes(city) || setCities([...cities, city])} />
                 {cities.map(city => {
                     return (
                         <City

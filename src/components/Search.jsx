@@ -7,7 +7,8 @@ const Search = ({ onSubmit }) => {
     return (
         <form className={styles.form} onSubmit={e => {
             e.preventDefault()
-            onSubmit(value.trim())
+            // only delete value if it gets submitted
+            onSubmit(value.trim().toLowerCase()) || setValue('')
         }}>
             <input
                 type="text"
