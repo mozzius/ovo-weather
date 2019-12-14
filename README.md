@@ -6,16 +6,14 @@ You can see it live at https://ovo-weather.now.sh/
 
 ## Building etc
 
-Install dependencies using `yarn`, then run
+Install dependencies using `yarn`, then start the development server using:
 
 ```
 yarn start
 ```
 
-to use the development server, or
+Alternatively, you can built it using:
 
 ```
 yarn build
 ```
-
-to build it
