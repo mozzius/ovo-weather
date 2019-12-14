@@ -32,9 +32,10 @@ const City = ({ location, deleteCity }) => {
             const date = day.dt_txt.split(' ')[0]
             if (date !== currentDate) {
                 currentDate = date
+                // the weather almost always comes in an array with one element, so just get the first element
                 days.push({
                     date,
-                    weather: [day.weather[0].main],
+                    weather: [day.weather[0].id],
                     maxTemp: Math.floor(day.main.temp_max - 273.15),
                     humidity: [day.main.humidity]
                 })
@@ -42,7 +43,7 @@ const City = ({ location, deleteCity }) => {
                 let current = days[days.length - 1]
                 let temp = Math.floor(day.main.temp_max - 273.15)
 
-                current.weather.push(day.weather[0].main)
+                current.weather.push(day.weather[0].id)
                 current.humidity.push(day.main.humidity)
 
                 days[days.length - 1] = {
@@ -92,6 +93,7 @@ const City = ({ location, deleteCity }) => {
                 </div>
             )
         case 'success':
+            console.log(data)
             if (data.cod !== '200') return <Error location={location} deleteCity={() => deleteCity(location)} />
 
             const days = calculateDays(data)

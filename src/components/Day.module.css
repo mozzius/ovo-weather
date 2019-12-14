@@ -1,11 +1,17 @@
 .day {
     flex-grow: 1;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .day > h3 {
     text-align: center;
-    margin: 10px 0 15px;
+    margin: -15px 0 15px;
+}
+
+.day > img {
+    align-self: center;
 }
 
 .day > p {
