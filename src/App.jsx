@@ -4,7 +4,11 @@ import City from './components/City'
 import Search from './components/Search';
 
 function App() {
-    const [cities, setCities] = useState(JSON.parse(window.localStorage.getItem('cities')) || [])
+    // 
+    const defaultCities = ['London']
+
+    // get cities from localStorage, fallback to default city (in this case London)
+    const [cities, setCities] = useState(JSON.parse(window.localStorage.getItem('cities')) || defaultCities)
 
     // obviously cities have to be unique for this to work,
     // so in the <Search /> onSubmit function I only add a new city if it's unique
