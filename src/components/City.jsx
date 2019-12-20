@@ -100,7 +100,12 @@ const City = ({ location, deleteCity }) => {
 
             return (
                 <div className={styles.city}>
-                    <h2 className={styles.name} onClick={() => deleteCity(location)}>{data.city.name}<span>{data.city.country}</span></h2>
+                    <h2
+                        className={styles.name}
+                        onClick={() => deleteCity(location)}
+                    >
+                        {data.city.name}<span>{data.city.country}</span>
+                    </h2>
                     <hr />
                     <div className={styles.days}>
                         {days.map(day => <Day key={day.date} data={day} />)}

@@ -233,7 +233,7 @@ const Day = ({ data }) => {
     return (
         <div className={styles.day}>
             <p className={styles.date}>{normalDate}</p>
-            <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} alt={`${main} icon`} />
+            <img src={`https://openweathermap.org/img/wn/${icon}@2x.png`} alt={`${main} icon`} />
             <h3>{main}</h3>
             <p>Max temp: {maxTemp}°C</p>
             <p>Humidity: {humidity}%</p>
