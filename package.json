@@ -1,6 +1,6 @@
 {
   "name": "ovo-weather",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,7 +10,7 @@
     "react-dom": "^16.12.0"
   },
   "devDependencies": {
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^3.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
