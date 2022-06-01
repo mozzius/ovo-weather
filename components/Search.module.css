@@ -1,0 +1,27 @@
+.form {
+  width: calc(100% - 40px);
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border: 2px solid black;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 30px;
+}
+
+.text {
+  border: none;
+  padding: 5px 10px;
+  flex-grow: 1;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  border: none;
+  flex-grow: 0;
+  padding: 0 20px 0 25px;
+  cursor: pointer;
+}

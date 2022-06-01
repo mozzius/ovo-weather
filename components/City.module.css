@@ -1,0 +1,43 @@
+.city {
+  padding: 15px;
+}
+
+.city > h2 {
+  margin: 10px;
+}
+
+.city > .name:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.city > .name:hover::after {
+  content: "Remove city from list";
+  font-size: 0.6em;
+  float: right;
+  margin-top: 12px;
+}
+
+.city > h2 > span {
+  color: #707070;
+  font-size: 0.6em;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hr {
+  border-color: black;
+}
+
+.errorText {
+  margin-left: 10px;
+  font-size: 1.1em;
+  color: #707070;
+}

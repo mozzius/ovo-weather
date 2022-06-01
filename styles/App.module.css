@@ -1,0 +1,16 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+}
